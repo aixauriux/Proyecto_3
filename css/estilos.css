@@ -1,0 +1,219 @@
+/* Colores del modo día */
+:root {
+    --fondo: #fdf8ff;
+    --texto: #383044;
+    --principal: #9254bd;
+    --encabezado: #e9d5ff;
+    --tarjeta: #ffffff;
+    --articulo: #faf5ff;
+    --borde: #eadcf5;
+    --texto-titulo: #75409b;
+}
+
+/* Colores del modo noche */
+body:has(#modo-noche:checked) {
+    --fondo: #211a2b;
+    --texto: #f5eafa;
+    --principal: #c084fc;
+    --encabezado: #352642;
+    --tarjeta: #302539;
+    --articulo: #3b2d47;
+    --borde: #594269;
+    --texto-titulo: #e0b7ff;
+}
+
+/* Modelo de caja */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--encabezado);
+    text-align: center;
+    padding: 25px;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--texto-titulo);
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+/* Menú con Flexbox */
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--texto-titulo);
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background-color: var(--principal);
+    color: white;
+}
+
+/* Botón de modo día y noche */
+#modo-noche {
+    display: none;
+}
+
+label[for="modo-noche"] {
+    display: inline-block;
+    background-color: var(--principal);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Contenido principal */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Secciones */
+section {
+    background-color: var(--tarjeta);
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid var(--borde);
+    border-radius: 15px;
+}
+
+/* Proyectos y artículos */
+article {
+    background-color: var(--articulo);
+    padding: 18px;
+    margin: 15px 0;
+    border-left: 4px solid var(--principal);
+    border-radius: 10px;
+}
+
+/* Imágenes */
+article img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+/* Enlaces de los proyectos */
+article a {
+    color: var(--texto-titulo);
+    font-weight: bold;
+}
+
+/* Formulario */
+fieldset {
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+legend {
+    color: var(--texto-titulo);
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+/* El botón de modo no debe ocupar todo el ancho */
+label[for="modo-noche"] {
+    width: auto;
+}
+
+button {
+    background-color: var(--principal);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Pie de página */
+body > footer {
+    background-color: var(--encabezado);
+    color: var(--texto);
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 12px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    article img {
+        height: auto;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+}

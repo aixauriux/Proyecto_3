@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Página de contacto de Aixa Sanchez.">
+    <meta name="keywords" content="contacto, Aixa Sanchez, desarrollo de software">
+    <meta name="author" content="Aixa Sanchez">
+
+    <meta property="og:title" content="Contacto | Aixa Sanchez">
+    <meta property="og:description" content="Formulario de contacto de Aixa Sanchez.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Contacto</title>
+   
+</head>
+
+<body>
+
+    <header>
+        <h1>Aixa Sanchez</h1>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <input type="checkbox" id="modo-noche">
+        <label for="modo-noche">Modo día / noche</label>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Contáctame</h2>
+
+            <p>
+                Llena el formulario
+            </p>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Información de contacto</legend>
+
+                    <p>
+                        <label for="nombre">Nombre:</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="correo">Correo electrónico:</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="6"
+                            required
+                        ></textarea>
+                    </p>
+
+                    <button type="submit">Enviar mensaje</button>
+
+                </fieldset>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aixa Sanchez. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
+
